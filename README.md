@@ -3,6 +3,7 @@
 This repository contains the full SwiftNotes stack:
 - `SwiftNotes2.0Web`: Next.js web app (UI, auth, notebook editor, API routes, Supabase integration)
 - `SwiftNotes2.0Backend`: FastAPI service for heavy YouTube/video AI processing
+- `backend2`: legacy experimental backend (pre-Gemini prototype work)
 
 ## Project Structure
 
@@ -10,8 +11,10 @@ This repository contains the full SwiftNotes stack:
 swiftnotesmain/
 |- SwiftNotes2.0Web/       # Frontend + Next.js server routes
 |- SwiftNotes2.0Backend/   # Python FastAPI backend
+|- backend2/               # Legacy experiment backend (prototype models/pipelines)
 |- README.md               # This file
 ```
+
 
 ## Problem Statement (PS)
 
@@ -82,6 +85,16 @@ Pipeline model (from your PPT):
 - AI features (Gemini) for Q&A, summaries, cheatsheets, flashcards, theory, mind map, semantic tags
 - YouTube transcript pipeline with fallback transcription via Groq Whisper
 - Video snapshot extraction and playlist intelligence (via backend endpoints)
+
+
+## Legacy Experimental Backend (`backend2`)
+
+- `backend2` contains earlier experimentation done before the current Gemini-key-based backend workflow.
+- It includes custom summarization and vision prototypes (BART pipeline, custom LSTM summarizer, custom CNN + YOLO player, transcript cleaning, and dataset prep scripts).
+- Results were not reliable enough for production quality (repetitive/noisy summaries and weak custom LSTM generation), so the project switched to the Gemini-driven implementation in `SwiftNotes2.0Backend`.
+- See `backend2/README.md` for full details of scripts and artifacts.
+
+
 
 ## Tech Stack
 

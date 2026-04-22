@@ -1,0 +1,41 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+
+# Env files
+.env
+.env.*
+
+# Node / Next
+node_modules/
+.next/
+dist/
+build/
+coverage/
+
+# backend2 large experiment artifacts (do not commit)
+backend2/data/
+backend2/merged_dataset/
+backend2/runs/
+backend2/Mathset/
+backend2/codeset/
+
+# backend2 model binaries / weights
+backend2/models/*.h5
+backend2/models/*.keras
+backend2/models/*.pth
+backend2/models/*.pt
+backend2/models/*.pkl
+backend2/*.pt
+backend2/*.onnx
+backend2/*.bin

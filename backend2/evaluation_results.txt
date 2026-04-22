@@ -1,0 +1,16 @@
+TRANSCRIPT FETCHED (Length: 59595 chars)
+==============================
+TEST 1: TRANSFORMER (BART) GLOBAL SUMMARY
+This video covers the following key points:
+- What is linear regression and what can it be useful for and we're going to start with useful for. What is the very basics of linear regression what is the actual result of the test and it can go from zero to infinity depending on what the maximum infinity is of the students so you can study two weeks in advance and one year in advance. linear regression from scratch in python.
+-  linear regression tries to find a line that fits these points the b. to a hundred points or from zero percent to a 100 percent. Most of the points are going to be in the middle somewhere here in themiddle. linear regression is a form of Bayes' Law. It's the law of averages, it's the rule of averages.
+- For linear regression what we're interested in is minimizing the error and the error is basically let's error. Depending on what you want you have to choose a different want. We want to find a function that minimizes the error of that function. We would go for each point and see and see if this function was correct we would predict that for this x value here.
+-  linear regression is basically the structure of a function.  that find a function that minimizes that error and this is what linear regression error is about is about. We expect the line the final line to be something like that to be pretty much. something with the gradient descent algorithm that we're going to talk about in a second but in order to minimize something it has to be. something that produces a value.
+- The error function needs to be defined in order to minimize it so that for x i get the best possible y. The error function is going to be 1 divided by n which is i'm going to 1 divide by n. The value of the y value of this point is the actual y i value. We can add an i here to make it a little bit more accurate so it is a little more accurate.
+- Don't be confused it's not really complicated. It may look complicated because it's math and for a lot of people math looks just complicated. All we're doing here is this is a mathematical way of writing that. We get the y value of the what we do is we get the actual point so this y value here or actual point. We square that difference and in the end we take all difference.
+- This is the error function that we're trying to minimize when it comes to linear regression. We're going to talk about partial derivatives about calculus so if you don't understand calculus at all you can skip to the coding part directly. This next part here is going to be very technical and mathematical. It may be a little bit boring.
+- We want to minimize that error function. We want to find the line for our line that gives us the lowest possible e. The only thing that we can influence is the m the m. How can we change m to maximally increase e? We can do that by taking the partial derivative.
+
+TEST 2: CUSTOM PYTORCH LSTM SUMMARY
+what are in the video in the video was to figure out what they are in an image that was to the local and process a small <OOV> in the video was to figure out what they are in an image so i can
+
