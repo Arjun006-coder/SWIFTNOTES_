@@ -30,20 +30,40 @@ app.add_middleware(
 class VideoRequest(BaseModel):
     url: str
 
+def safe_remove_file(path: str, retries: int = 6, base_delay: float = 0.35) -> None:
+    """Best-effort Windows-safe file deletion with short retries for file lock release."""
+    if not path:
+        return
+    for attempt in range(retries):
+        try:
+            if os.path.exists(path):
+                os.remove(path)
+            return
+        except PermissionError:
+            if attempt == retries - 1:
+                print(f"Cleanup skipped (file lock): {path}")
+                return
+            time.sleep(base_delay * (attempt + 1))
+        except Exception as e:
+            print(f"Cleanup skipped ({path}): {e}")
+            return
+
 def download_video(url: str, output_path: str = "temp_video.mp4") -> str:
     print(f"Bypassing Web Anti-Bot limits using pytubefix integration: {url}")
     
     if os.path.exists(output_path):
-        os.remove(output_path)
+        safe_remove_file(output_path)
     try:
         ydl_opts = {
-            'format': 'best',
+            # Keep files reasonably sized so upload + Gemini processing stay fast.
+            'format': 'best[height<=720][ext=mp4]/best[height<=720]/best',
             'outtmpl': output_path,
             'quiet': True,
             'no_warnings': True,
             'source_address': '0.0.0.0',
-            'socket_timeout': 120,
+            'socket_timeout': 200,
             'retries': 20,
+            'noplaylist': True,
             'extractor_args': {
                 'youtube': {
                     'player_client': ['ios', 'android', 'web']
@@ -58,6 +78,25 @@ def download_video(url: str, output_path: str = "temp_video.mp4") -> str:
         raise e
             
     return output_path
+
+async def upload_file_with_retry(video_path: str, retries: int = 4):
+    for attempt in range(retries):
+        try:
+            return await asyncio.to_thread(genai.upload_file, path=video_path)
+        except Exception as e:
+            err = str(e).lower()
+            transient_ssl = (
+                "eof occurred in violation of protocol" in err
+                or "ssl" in err
+                or "connection reset" in err
+                or "timed out" in err
+            )
+            if transient_ssl and attempt < retries - 1:
+                wait_s = 4 + (attempt * 4) + random.uniform(1, 4)
+                print(f"Transient upload error. Retrying Gemini file upload in {wait_s:.2f}s... (Attempt {attempt+1}/{retries})")
+                await asyncio.sleep(wait_s)
+                continue
+            raise
 
 async def generate_tab(model, video_file, prompt: str, retries: int = 5) -> str:
     for attempt in range(retries):
@@ -81,7 +120,7 @@ async def generate_tab(model, video_file, prompt: str, retries: int = 5) -> str:
             if "429" in error_str and attempt < retries - 1:
                 # Calculate Jitter to prevent Thundering Herd collisions!
                 sleep_time = 32 + (attempt * 10) + random.uniform(5, 25)
-                print(f"Gemini API Rate Lmited (429). Native Google free tier limits hit. Sleeping thread for {sleep_time:.2f} seconds... (Attempt {attempt+1}/{retries})")
+                print(f"Gemini API Rate Limited (429). Native Google free tier limits hit. Sleeping thread for {sleep_time:.2f} seconds... (Attempt {attempt+1}/{retries})")
                 await asyncio.sleep(sleep_time)
             else:
                 raise e
@@ -98,7 +137,7 @@ async def extract_video_knowledge(req: VideoRequest):
         
         # 2. Upload to Gemini
         print("Uploading to Gemini File API...")
-        video_file = await asyncio.to_thread(genai.upload_file, path=video_path)
+        video_file = await upload_file_with_retry(video_path)
         
         # 3. Wait for PROCESSING to finish
         print(f"Uploaded as: {video_file.name}. Waiting for ACTIVE state...")
@@ -186,13 +225,8 @@ async def extract_video_knowledge(req: VideoRequest):
 
         print("Extraction completed successfully!")
         
-        # Clean up local video file safely on Windows
-        try:
-            import glob
-            for f in glob.glob("temp_video*"):
-                os.remove(f)
-        except Exception as cleanup_err:
-            print(f"Windows IO Lock Bypass (Success): {cleanup_err}")
+        # Clean up only this request's temp file (avoid cross-request collisions).
+        safe_remove_file(video_path)
 
         # Split the result back into 5 tabs safely using the exact headers
         parts = []
@@ -227,12 +261,7 @@ async def extract_video_knowledge(req: VideoRequest):
     except Exception as e:
         print(f"Error: {e}")
         # Cleanup on failure safely on Windows
-        try:
-            import glob
-            for f in glob.glob("temp_video*"):
-                os.remove(f)
-        except Exception as cleanup_err:
-            print(f"Windows IO Lock Bypass (Failure): {cleanup_err}")
+        safe_remove_file(video_path)
             
         raise HTTPException(status_code=500, detail=str(e))
 

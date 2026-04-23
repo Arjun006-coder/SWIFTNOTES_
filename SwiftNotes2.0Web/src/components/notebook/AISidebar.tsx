@@ -57,6 +57,8 @@ export default function AISidebar({ isOpen, onClose, notebookText, videos: rawVi
     const [fetchingTranscript, setFetchingTranscript] = useState(false);
     const [generatingAll, setGeneratingAll] = useState(false);
     const [loadingPhaseText, setLoadingPhaseText] = useState("Initializing Pipeline...");
+    const generatingAllRef = useRef(false);
+    const autoTriggeredByVideoRef = useRef<Record<string, boolean>>({});
 
     useEffect(() => {
         if (!generatingAll) return;
@@ -133,6 +135,24 @@ export default function AISidebar({ isOpen, onClose, notebookText, videos: rawVi
             parts.push(`Topic: ${selectedVideo.title}\n(Transcript not yet available — generate content based on this topic title)`);
         }
         return parts.join("\n\n");
+    };
+
+    const normalizeYoutubeWatchUrl = (url: string) => {
+        try {
+            const u = new URL(url);
+            const host = u.hostname.replace("www.", "");
+            if (host === "youtube.com" || host === "m.youtube.com" || host === "music.youtube.com") {
+                const v = u.searchParams.get("v");
+                if (v) return `https://www.youtube.com/watch?v=${v}`;
+            }
+            if (host === "youtu.be") {
+                const v = u.pathname.replace("/", "").split("?")[0].trim();
+                if (v) return `https://www.youtube.com/watch?v=${v}`;
+            }
+        } catch {
+            // Keep original URL if parsing fails
+        }
+        return url;
     };
 
     // Fetch transcript directly in AI sidebar (VideoPanel may not have fetched it yet)
@@ -220,15 +240,14 @@ export default function AISidebar({ isOpen, onClose, notebookText, videos: rawVi
     };
 
     const handleGenerateVideoKnowledge = async () => {
-        if (!selectedVideoId || !notebookId || generatingAll) return;
-        
-        // Safely extract the transcript (or use an empty string) so referencing it below doesn't throw a fatal ReferenceError JS Crash
-        const safeTranscript = localTranscripts[selectedVideoId] || selectedVideo?.text || transcriptMap.get(selectedVideoId)?.text || "";
-        
+        if (!selectedVideoId || !notebookId || generatingAllRef.current) return;
+
+        generatingAllRef.current = true;
         setGeneratingAll(true);
         setTabErrors({});
         try {
-            const videoUrl = rawVideos?.find((v: any) => v.videoId === selectedVideoId)?.url || `https://www.youtube.com/watch?v=${selectedVideoId}`;
+            const rawVideoUrl = rawVideos?.find((v: any) => v.videoId === selectedVideoId)?.url || `https://www.youtube.com/watch?v=${selectedVideoId}`;
+            const videoUrl = normalizeYoutubeWatchUrl(rawVideoUrl);
             
             const res = await fetch("https://multigranular-darrin-nonartistical.ngrok-free.dev/extract", {
                 method: "POST",
@@ -242,16 +261,21 @@ export default function AISidebar({ isOpen, onClose, notebookText, videos: rawVi
             const data = await res.json();
             if (!res.ok) throw new Error(data.error || data.detail || "Map-Reduce AI generation failed");
             
-            // Persist the massive AI chunk array natively to Supabase
-            await updateNotebookVideoAINotes(notebookId, selectedVideoId, data);
-            
-            // Update cache locally for all tabs natively without blowing out memory
+            // Update cache immediately so users see results even if DB write is slow/fails.
             setCache(prev => ({ ...prev, [selectedVideoId]: { ...prev[selectedVideoId], ...data } }));
-            if (onAINotesUpdated) onAINotesUpdated();
+
+            // Persist in background; never block UI rendering on DB sync.
+            updateNotebookVideoAINotes(notebookId, selectedVideoId, data)
+                .then(() => onAINotesUpdated && onAINotesUpdated())
+                .catch((persistErr) => {
+                    console.error("Failed to persist AI pipeline notes:", persistErr);
+                });
         } catch (e: any) {
             setTabErrors(prev => ({ ...prev, [activeTab]: e.message || "Failed to generate AI pipeline." }));
+        } finally {
+            generatingAllRef.current = false;
+            setGeneratingAll(false);
         }
-        setGeneratingAll(false);
     };
 
     // Auto-trigger video knowledge pipeline if nothing is cached yet
@@ -263,6 +287,8 @@ export default function AISidebar({ isOpen, onClose, notebookText, videos: rawVi
 
         // Strict Loop Guard: If we crashed and have an error for this active tab, DO NOT immediately retry fetching! Otherwise React enters an infinite loop
         if (!hasAnyCachedData && !tabErrors[activeTab]) {
+            if (autoTriggeredByVideoRef.current[selectedVideoId]) return;
+            autoTriggeredByVideoRef.current[selectedVideoId] = true;
             handleGenerateVideoKnowledge();
         }
     }, [isOpen, selectedVideoId, localTranscripts, selectedVideo, transcriptMap, cache, generatingAll, fetchingTranscript]); // eslint-disable-line
