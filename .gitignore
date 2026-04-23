@@ -39,3 +39,6 @@ backend2/models/*.pkl
 backend2/*.pt
 backend2/*.onnx
 backend2/*.bin
+
+SwiftNotes2.0Backend/*.env
+SwiftNotes2.0Web/.*env
