@@ -1,0 +1,1328 @@
+{
+  "nodes": [
+    {
+      "id": "swiftnotes",
+      "label": "SwiftNotes",
+      "type": "project"
+    },
+    {
+      "id": "swiftnotes-web",
+      "label": "SwiftNotes2.0Web",
+      "type": "component"
+    },
+    {
+      "id": "swiftnotes-backend",
+      "label": "SwiftNotes2.0Backend",
+      "type": "component"
+    },
+    {
+      "id": "backend2-legacy",
+      "label": "backend2 (Legacy)",
+      "type": "component"
+    },
+    {
+      "id": "nextjs",
+      "label": "Next.js",
+      "type": "technology"
+    },
+    {
+      "id": "react",
+      "label": "React 19",
+      "type": "technology"
+    },
+    {
+      "id": "tailwind",
+      "label": "Tailwind CSS",
+      "type": "technology"
+    },
+    {
+      "id": "framer-motion",
+      "label": "Framer Motion",
+      "type": "technology"
+    },
+    {
+      "id": "lucide-react",
+      "label": "Lucide React",
+      "type": "technology"
+    },
+    {
+      "id": "next-themes",
+      "label": "next-themes",
+      "type": "technology"
+    },
+    {
+      "id": "tiptap",
+      "label": "Tiptap (ProseMirror)",
+      "type": "technology"
+    },
+    {
+      "id": "react-player",
+      "label": "React Player",
+      "type": "technology"
+    },
+    {
+      "id": "canvas-api",
+      "label": "Canvas API",
+      "type": "technology"
+    },
+    {
+      "id": "liveblocks",
+      "label": "Liveblocks",
+      "type": "technology"
+    },
+    {
+      "id": "yjs",
+      "label": "Yjs CRDT",
+      "type": "technology"
+    },
+    {
+      "id": "fastapi",
+      "label": "FastAPI",
+      "type": "technology"
+    },
+    {
+      "id": "uvicorn",
+      "label": "Uvicorn",
+      "type": "technology"
+    },
+    {
+      "id": "yt-dlp",
+      "label": "yt-dlp",
+      "type": "technology"
+    },
+    {
+      "id": "gemini",
+      "label": "Google Gemini 2.5-Flash",
+      "type": "technology"
+    },
+    {
+      "id": "groq-whisper",
+      "label": "Groq Whisper",
+      "type": "technology"
+    },
+    {
+      "id": "ollama",
+      "label": "Ollama",
+      "type": "technology"
+    },
+    {
+      "id": "gemma",
+      "label": "Gemma 2B",
+      "type": "technology"
+    },
+    {
+      "id": "clerk",
+      "label": "Clerk",
+      "type": "technology"
+    },
+    {
+      "id": "supabase",
+      "label": "Supabase",
+      "type": "technology"
+    },
+    {
+      "id": "postgresql",
+      "label": "PostgreSQL",
+      "type": "technology"
+    },
+    {
+      "id": "prisma",
+      "label": "Prisma",
+      "type": "technology"
+    },
+    {
+      "id": "ffmpeg",
+      "label": "FFmpeg",
+      "type": "technology"
+    },
+    {
+      "id": "bart",
+      "label": "BART (Facebook)",
+      "type": "technology"
+    },
+    {
+      "id": "lstm",
+      "label": "Custom LSTM Summarizer",
+      "type": "technology"
+    },
+    {
+      "id": "cnn",
+      "label": "Custom CNN",
+      "type": "technology"
+    },
+    {
+      "id": "yolo",
+      "label": "YOLO Object Detection",
+      "type": "technology"
+    },
+    {
+      "id": "pytorch",
+      "label": "PyTorch",
+      "type": "technology"
+    },
+    {
+      "id": "keras",
+      "label": "Keras",
+      "type": "technology"
+    },
+    {
+      "id": "notebook-editor",
+      "label": "Notebook Editor",
+      "type": "feature"
+    },
+    {
+      "id": "drawing-mode",
+      "label": "Digital Drawing Mode",
+      "type": "feature"
+    },
+    {
+      "id": "polaroid-snaps",
+      "label": "Polaroid Snaps (Video Snaps)",
+      "type": "feature"
+    },
+    {
+      "id": "timestamp-linking",
+      "label": "Timestamp Linking",
+      "type": "feature"
+    },
+    {
+      "id": "ai-summary",
+      "label": "AI Summary Tab",
+      "type": "feature"
+    },
+    {
+      "id": "ai-formulae",
+      "label": "Formulae/Code Extraction",
+      "type": "feature"
+    },
+    {
+      "id": "ai-cheatsheet",
+      "label": "AI Cheatsheet",
+      "type": "feature"
+    },
+    {
+      "id": "ai-flashcards",
+      "label": "AI Flashcards",
+      "type": "feature"
+    },
+    {
+      "id": "ai-mindmap",
+      "label": "AI Mind Map",
+      "type": "feature"
+    },
+    {
+      "id": "ai-qa",
+      "label": "Context-aware Q&A",
+      "type": "feature"
+    },
+    {
+      "id": "community-hub",
+      "label": "Community Knowledge Hub",
+      "type": "feature"
+    },
+    {
+      "id": "live-collaboration",
+      "label": "Live Collaboration (OTP-based rooms)",
+      "type": "feature"
+    },
+    {
+      "id": "youtube-integration",
+      "label": "YouTube Integration",
+      "type": "feature"
+    },
+    {
+      "id": "authentication",
+      "label": "User Authentication",
+      "type": "feature"
+    },
+    {
+      "id": "real-time-cursors",
+      "label": "Real-time Multiplayer Cursors",
+      "type": "feature"
+    },
+    {
+      "id": "semantic-tags",
+      "label": "Semantic Tags",
+      "type": "feature"
+    },
+    {
+      "id": "video-ingestion",
+      "label": "Video Ingestion",
+      "type": "process"
+    },
+    {
+      "id": "multimodal-analysis",
+      "label": "Multi-modal Analysis",
+      "type": "process"
+    },
+    {
+      "id": "ai-synthesis",
+      "label": "AI Synthesis",
+      "type": "process"
+    },
+    {
+      "id": "semantic-retrieval",
+      "label": "Semantic Retrieval",
+      "type": "process"
+    },
+    {
+      "id": "transcript-fetching",
+      "label": "Transcript Fetching",
+      "type": "process"
+    },
+    {
+      "id": "playlist-info",
+      "label": "Playlist Info Extraction",
+      "type": "process"
+    },
+    {
+      "id": "snapshot-extraction",
+      "label": "Snapshot Extraction",
+      "type": "process"
+    },
+    {
+      "id": "server-actions",
+      "label": "Next.js Server Actions",
+      "type": "architecture"
+    },
+    {
+      "id": "api-routes",
+      "label": "Next.js API Routes",
+      "type": "architecture"
+    },
+    {
+      "id": "client-components",
+      "label": "Client-side Components",
+      "type": "architecture"
+    },
+    {
+      "id": "ingestion-phase",
+      "label": "Phase 1: Ingestion",
+      "type": "process"
+    },
+    {
+      "id": "synthesis-phase",
+      "label": "Phase 2: Synthesis",
+      "type": "process"
+    },
+    {
+      "id": "users-table",
+      "label": "Users Table",
+      "type": "database"
+    },
+    {
+      "id": "notebook-table",
+      "label": "Notebooks Table",
+      "type": "database"
+    },
+    {
+      "id": "notepage-table",
+      "label": "NotePages Table",
+      "type": "database"
+    },
+    {
+      "id": "snap-table",
+      "label": "Snaps Table",
+      "type": "database"
+    },
+    {
+      "id": "room-access-table",
+      "label": "RoomAccessRequest Table",
+      "type": "database"
+    },
+    {
+      "id": "user-favorite-table",
+      "label": "UserFavorite Table",
+      "type": "database"
+    },
+    {
+      "id": "notebook-vote-table",
+      "label": "NotebookVote Table",
+      "type": "database"
+    },
+    {
+      "id": "comment-table",
+      "label": "Comment Table",
+      "type": "database"
+    },
+    {
+      "id": "extract-endpoint",
+      "label": "POST /extract",
+      "type": "api"
+    },
+    {
+      "id": "snapshot-endpoint",
+      "label": "POST /snapshot",
+      "type": "api"
+    },
+    {
+      "id": "playlist-endpoint",
+      "label": "POST /playlist-info",
+      "type": "api"
+    },
+    {
+      "id": "multi-video-endpoint",
+      "label": "POST /multi-video-analysis",
+      "type": "api"
+    },
+    {
+      "id": "generate-video-knowledge",
+      "label": "generate-video-knowledge Route",
+      "type": "api"
+    },
+    {
+      "id": "youtube-route",
+      "label": "/api/youtube Route",
+      "type": "api"
+    },
+    {
+      "id": "ai-sidebar",
+      "label": "AI Sidebar Component",
+      "type": "component"
+    },
+    {
+      "id": "knowledge-hub",
+      "label": "Knowledge Hub Component",
+      "type": "component"
+    },
+    {
+      "id": "video-panel",
+      "label": "Video Panel Component",
+      "type": "component"
+    },
+    {
+      "id": "page-flip-engine",
+      "label": "Page Flip Engine",
+      "type": "component"
+    },
+    {
+      "id": "transformer-engine",
+      "label": "Transformer Engine",
+      "type": "module"
+    },
+    {
+      "id": "transcript-fetcher",
+      "label": "Transcript Fetcher",
+      "type": "module"
+    },
+    {
+      "id": "video-streamer",
+      "label": "Video Streamer",
+      "type": "module"
+    },
+    {
+      "id": "nlp-inference",
+      "label": "NLP Inference",
+      "type": "module"
+    },
+    {
+      "id": "cnnmodel",
+      "label": "CNN Model",
+      "type": "module"
+    },
+    {
+      "id": "data-generator",
+      "label": "Data Generator",
+      "type": "tool"
+    },
+    {
+      "id": "train-summarizers",
+      "label": "Train Summarizers",
+      "type": "tool"
+    },
+    {
+      "id": "train-cnn",
+      "label": "Train CNN",
+      "type": "tool"
+    },
+    {
+      "id": "prepareds",
+      "label": "Data Preparation (prepareds.py)",
+      "type": "tool"
+    },
+    {
+      "id": "problem-statement",
+      "label": "Problem: Context Switching in Note-Taking",
+      "type": "concept"
+    },
+    {
+      "id": "solution-concept",
+      "label": "All-in-One Multi-modal Learning Workspace",
+      "type": "concept"
+    },
+    {
+      "id": "cognitive-overload",
+      "label": "Cognitive Overload",
+      "type": "problem"
+    },
+    {
+      "id": "lost-context",
+      "label": "Lost Context",
+      "type": "problem"
+    },
+    {
+      "id": "static-notes",
+      "label": "Static Notes (Disconnected from Media)",
+      "type": "problem"
+    },
+    {
+      "id": "learning-styles",
+      "label": "Multiple Learning Styles Support",
+      "type": "feature"
+    },
+    {
+      "id": "active-recall",
+      "label": "Active Recall Formats",
+      "type": "feature"
+    },
+    {
+      "id": "retention",
+      "label": "Improved Retention",
+      "type": "benefit"
+    },
+    {
+      "id": "context-preservation",
+      "label": "Context Preservation",
+      "type": "benefit"
+    },
+    {
+      "id": "collaborative-learning",
+      "label": "Collaborative Learning",
+      "type": "feature"
+    },
+    {
+      "id": "shared-study-spaces",
+      "label": "Shared Study Spaces",
+      "type": "feature"
+    },
+    {
+      "id": "linear-regression",
+      "label": "Linear Regression Example",
+      "type": "example"
+    },
+    {
+      "id": "gradient-descent",
+      "label": "Gradient Descent Algorithm",
+      "type": "algorithm"
+    },
+    {
+      "id": "mean-squared-error",
+      "label": "Mean Squared Error (MSE)",
+      "type": "algorithm"
+    },
+    {
+      "id": "env-config",
+      "label": "Environment Configuration",
+      "type": "config"
+    },
+    {
+      "id": "docker",
+      "label": "Docker",
+      "type": "technology"
+    },
+    {
+      "id": "venv",
+      "label": "Python Virtual Environment",
+      "type": "tool"
+    },
+    {
+      "id": "npm",
+      "label": "NPM Package Manager",
+      "type": "tool"
+    },
+    {
+      "id": "pyqt6",
+      "label": "PyQt6",
+      "type": "technology"
+    },
+    {
+      "id": "opencv",
+      "label": "OpenCV",
+      "type": "technology"
+    },
+    {
+      "id": "pandas",
+      "label": "Pandas",
+      "type": "technology"
+    },
+    {
+      "id": "matplotlib",
+      "label": "Matplotlib",
+      "type": "technology"
+    },
+    {
+      "id": "pydantic",
+      "label": "Pydantic",
+      "type": "technology"
+    },
+    {
+      "id": "python-dotenv",
+      "label": "python-dotenv",
+      "type": "technology"
+    }
+  ],
+  "edges": [
+    {
+      "source": "swiftnotes",
+      "target": "swiftnotes-web",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "swiftnotes",
+      "target": "swiftnotes-backend",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "swiftnotes",
+      "target": "backend2-legacy",
+      "type": "contains",
+      "weight": 0.7
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "nextjs",
+      "type": "uses",
+      "weight": 1.0
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "react",
+      "type": "uses",
+      "weight": 1.0
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "tailwind",
+      "type": "uses",
+      "weight": 1.0
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "framer-motion",
+      "type": "uses",
+      "weight": 0.9
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "lucide-react",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "next-themes",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "tiptap",
+      "type": "uses",
+      "weight": 0.95
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "react-player",
+      "type": "uses",
+      "weight": 0.85
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "canvas-api",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "liveblocks",
+      "type": "uses",
+      "weight": 0.85
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "yjs",
+      "type": "uses",
+      "weight": 0.85
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "clerk",
+      "type": "uses",
+      "weight": 1.0
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "supabase",
+      "type": "uses",
+      "weight": 1.0
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "gemini",
+      "type": "uses",
+      "weight": 0.95
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "ollama",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "swiftnotes-backend",
+      "target": "fastapi",
+      "type": "uses",
+      "weight": 1.0
+    },
+    {
+      "source": "swiftnotes-backend",
+      "target": "uvicorn",
+      "type": "uses",
+      "weight": 1.0
+    },
+    {
+      "source": "swiftnotes-backend",
+      "target": "yt-dlp",
+      "type": "uses",
+      "weight": 0.95
+    },
+    {
+      "source": "swiftnotes-backend",
+      "target": "gemini",
+      "type": "uses",
+      "weight": 1.0
+    },
+    {
+      "source": "swiftnotes-backend",
+      "target": "groq-whisper",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "swiftnotes-backend",
+      "target": "ffmpeg",
+      "type": "depends_on",
+      "weight": 0.95
+    },
+    {
+      "source": "swiftnotes-backend",
+      "target": "pydantic",
+      "type": "uses",
+      "weight": 0.9
+    },
+    {
+      "source": "swiftnotes-backend",
+      "target": "python-dotenv",
+      "type": "uses",
+      "weight": 0.9
+    },
+    {
+      "source": "backend2-legacy",
+      "target": "bart",
+      "type": "uses",
+      "weight": 0.9
+    },
+    {
+      "source": "backend2-legacy",
+      "target": "lstm",
+      "type": "uses",
+      "weight": 0.85
+    },
+    {
+      "source": "backend2-legacy",
+      "target": "cnn",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "backend2-legacy",
+      "target": "yolo",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "backend2-legacy",
+      "target": "pytorch",
+      "type": "uses",
+      "weight": 0.85
+    },
+    {
+      "source": "backend2-legacy",
+      "target": "keras",
+      "type": "uses",
+      "weight": 0.75
+    },
+    {
+      "source": "backend2-legacy",
+      "target": "transformer-engine",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "backend2-legacy",
+      "target": "transcript-fetcher",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "backend2-legacy",
+      "target": "video-streamer",
+      "type": "contains",
+      "weight": 1.0
+    },
+    {
+      "source": "backend2-legacy",
+      "target": "nlp-inference",
+      "type": "contains",
+      "weight": 0.9
+    },
+    {
+      "source": "backend2-legacy",
+      "target": "cnnmodel",
+      "type": "contains",
+      "weight": 0.9
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "notebook-editor",
+      "type": "implements",
+      "weight": 1.0
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "drawing-mode",
+      "type": "implements",
+      "weight": 0.95
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "polaroid-snaps",
+      "type": "implements",
+      "weight": 0.95
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "timestamp-linking",
+      "type": "implements",
+      "weight": 0.95
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "ai-summary",
+      "type": "implements",
+      "weight": 0.95
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "ai-formulae",
+      "type": "implements",
+      "weight": 0.9
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "ai-cheatsheet",
+      "type": "implements",
+      "weight": 0.9
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "ai-flashcards",
+      "type": "implements",
+      "weight": 0.9
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "ai-mindmap",
+      "type": "implements",
+      "weight": 0.85
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "ai-qa",
+      "type": "implements",
+      "weight": 0.95
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "community-hub",
+      "type": "implements",
+      "weight": 0.95
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "live-collaboration",
+      "type": "implements",
+      "weight": 0.9
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "youtube-integration",
+      "type": "implements",
+      "weight": 0.95
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "authentication",
+      "type": "implements",
+      "weight": 1.0
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "real-time-cursors",
+      "type": "implements",
+      "weight": 0.85
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "semantic-tags",
+      "type": "implements",
+      "weight": 0.85
+    },
+    {
+      "source": "swiftnotes-backend",
+      "target": "video-ingestion",
+      "type": "implements",
+      "weight": 1.0
+    },
+    {
+      "source": "swiftnotes-backend",
+      "target": "multimodal-analysis",
+      "type": "implements",
+      "weight": 0.95
+    },
+    {
+      "source": "swiftnotes-backend",
+      "target": "transcript-fetching",
+      "type": "implements",
+      "weight": 0.95
+    },
+    {
+      "source": "swiftnotes-backend",
+      "target": "playlist-info",
+      "type": "implements",
+      "weight": 0.9
+    },
+    {
+      "source": "swiftnotes-backend",
+      "target": "snapshot-extraction",
+      "type": "implements",
+      "weight": 0.95
+    },
+    {
+      "source": "swiftnotes",
+      "target": "ingestion-phase",
+      "type": "implements",
+      "weight": 1.0
+    },
+    {
+      "source": "swiftnotes",
+      "target": "synthesis-phase",
+      "type": "implements",
+      "weight": 1.0
+    },
+    {
+      "source": "swiftnotes",
+      "target": "semantic-retrieval",
+      "type": "implements",
+      "weight": 0.95
+    },
+    {
+      "source": "ingestion-phase",
+      "target": "video-ingestion",
+      "type": "includes",
+      "weight": 1.0
+    },
+    {
+      "source": "synthesis-phase",
+      "target": "ai-synthesis",
+      "type": "includes",
+      "weight": 1.0
+    },
+    {
+      "source": "ai-synthesis",
+      "target": "ai-summary",
+      "type": "produces",
+      "weight": 1.0
+    },
+    {
+      "source": "ai-synthesis",
+      "target": "ai-formulae",
+      "type": "produces",
+      "weight": 0.95
+    },
+    {
+      "source": "ai-synthesis",
+      "target": "ai-cheatsheet",
+      "type": "produces",
+      "weight": 0.95
+    },
+    {
+      "source": "ai-synthesis",
+      "target": "ai-flashcards",
+      "type": "produces",
+      "weight": 0.95
+    },
+    {
+      "source": "ai-synthesis",
+      "target": "ai-mindmap",
+      "type": "produces",
+      "weight": 0.9
+    },
+    {
+      "source": "supabase",
+      "target": "postgresql",
+      "type": "uses",
+      "weight": 1.0
+    },
+    {
+      "source": "supabase",
+      "target": "prisma",
+      "type": "used_by",
+      "weight": 0.95
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "users-table",
+      "type": "stores",
+      "weight": 1.0
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "notebook-table",
+      "type": "stores",
+      "weight": 1.0
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "notepage-table",
+      "type": "stores",
+      "weight": 1.0
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "snap-table",
+      "type": "stores",
+      "weight": 1.0
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "comment-table",
+      "type": "stores",
+      "weight": 0.95
+    },
+    {
+      "source": "swiftnotes-backend",
+      "target": "extract-endpoint",
+      "type": "implements",
+      "weight": 1.0
+    },
+    {
+      "source": "swiftnotes-backend",
+      "target": "snapshot-endpoint",
+      "type": "implements",
+      "weight": 1.0
+    },
+    {
+      "source": "swiftnotes-backend",
+      "target": "playlist-endpoint",
+      "type": "implements",
+      "weight": 1.0
+    },
+    {
+      "source": "swiftnotes-backend",
+      "target": "multi-video-endpoint",
+      "type": "implements",
+      "weight": 0.95
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "generate-video-knowledge",
+      "type": "implements",
+      "weight": 0.95
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "youtube-route",
+      "type": "implements",
+      "weight": 0.85
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "ai-sidebar",
+      "type": "contains",
+      "weight": 0.95
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "knowledge-hub",
+      "type": "contains",
+      "weight": 0.95
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "video-panel",
+      "type": "contains",
+      "weight": 0.95
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "page-flip-engine",
+      "type": "contains",
+      "weight": 0.8
+    },
+    {
+      "source": "swiftnotes",
+      "target": "problem-statement",
+      "type": "solves",
+      "weight": 1.0
+    },
+    {
+      "source": "solution-concept",
+      "target": "problem-statement",
+      "type": "addresses",
+      "weight": 1.0
+    },
+    {
+      "source": "swiftnotes",
+      "target": "solution-concept",
+      "type": "implements",
+      "weight": 1.0
+    },
+    {
+      "source": "solution-concept",
+      "target": "cognitive-overload",
+      "type": "mitigates",
+      "weight": 0.95
+    },
+    {
+      "source": "solution-concept",
+      "target": "lost-context",
+      "type": "mitigates",
+      "weight": 0.95
+    },
+    {
+      "source": "solution-concept",
+      "target": "static-notes",
+      "type": "mitigates",
+      "weight": 0.9
+    },
+    {
+      "source": "swiftnotes",
+      "target": "active-recall",
+      "type": "implements",
+      "weight": 0.95
+    },
+    {
+      "source": "active-recall",
+      "target": "ai-flashcards",
+      "type": "used_by",
+      "weight": 1.0
+    },
+    {
+      "source": "active-recall",
+      "target": "ai-qa",
+      "type": "used_by",
+      "weight": 0.95
+    },
+    {
+      "source": "active-recall",
+      "target": "retention",
+      "type": "improves",
+      "weight": 1.0
+    },
+    {
+      "source": "timestamp-linking",
+      "target": "context-preservation",
+      "type": "enables",
+      "weight": 1.0
+    },
+    {
+      "source": "polaroid-snaps",
+      "target": "context-preservation",
+      "type": "enables",
+      "weight": 0.95
+    },
+    {
+      "source": "liveblocks",
+      "target": "collaborative-learning",
+      "type": "enables",
+      "weight": 1.0
+    },
+    {
+      "source": "yjs",
+      "target": "collaborative-learning",
+      "type": "enables",
+      "weight": 1.0
+    },
+    {
+      "source": "live-collaboration",
+      "target": "shared-study-spaces",
+      "type": "implements",
+      "weight": 1.0
+    },
+    {
+      "source": "transformer-engine",
+      "target": "bart",
+      "type": "uses",
+      "weight": 1.0
+    },
+    {
+      "source": "transcript-fetcher",
+      "target": "yt-dlp",
+      "type": "uses",
+      "weight": 1.0
+    },
+    {
+      "source": "video-streamer",
+      "target": "pyqt6",
+      "type": "uses",
+      "weight": 1.0
+    },
+    {
+      "source": "video-streamer",
+      "target": "opencv",
+      "type": "uses",
+      "weight": 1.0
+    },
+    {
+      "source": "backend2-legacy",
+      "target": "train-summarizers",
+      "type": "includes",
+      "weight": 0.85
+    },
+    {
+      "source": "backend2-legacy",
+      "target": "train-cnn",
+      "type": "includes",
+      "weight": 0.85
+    },
+    {
+      "source": "backend2-legacy",
+      "target": "prepareds",
+      "type": "includes",
+      "weight": 0.8
+    },
+    {
+      "source": "backend2-legacy",
+      "target": "data-generator",
+      "type": "includes",
+      "weight": 0.7
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "server-actions",
+      "type": "uses",
+      "weight": 1.0
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "api-routes",
+      "type": "uses",
+      "weight": 0.9
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "client-components",
+      "type": "uses",
+      "weight": 1.0
+    },
+    {
+      "source": "nextjs",
+      "target": "react",
+      "type": "depends_on",
+      "weight": 1.0
+    },
+    {
+      "source": "tiptap",
+      "target": "yjs",
+      "type": "integrates_with",
+      "weight": 0.95
+    },
+    {
+      "source": "liveblocks",
+      "target": "yjs",
+      "type": "integrates_with",
+      "weight": 0.95
+    },
+    {
+      "source": "swiftnotes-web",
+      "target": "swiftnotes-backend",
+      "type": "calls",
+      "weight": 0.95
+    },
+    {
+      "source": "ai-sidebar",
+      "target": "gemini",
+      "type": "uses",
+      "weight": 1.0
+    },
+    {
+      "source": "knowledge-hub",
+      "target": "community-hub",
+      "type": "implements",
+      "weight": 1.0
+    },
+    {
+      "source": "video-panel",
+      "target": "youtube-integration",
+      "type": "implements",
+      "weight": 1.0
+    },
+    {
+      "source": "docker",
+      "target": "swiftnotes-backend",
+      "type": "can_deploy",
+      "weight": 0.8
+    },
+    {
+      "source": "multimodal-analysis",
+      "target": "gemini",
+      "type": "uses",
+      "weight": 1.0
+    },
+    {
+      "source": "transcript-fetching",
+      "target": "groq-whisper",
+      "type": "uses_as_fallback",
+      "weight": 0.8
+    },
+    {
+      "source": "snapshot-extraction",
+      "target": "ffmpeg",
+      "type": "depends_on",
+      "weight": 1.0
+    },
+    {
+      "source": "snapshot-extraction",
+      "target": "yt-dlp",
+      "type": "depends_on",
+      "weight": 1.0
+    },
+    {
+      "source": "ollama",
+      "target": "gemma",
+      "type": "runs",
+      "weight": 1.0
+    },
+    {
+      "source": "semantic-tags",
+      "target": "gemma",
+      "type": "uses",
+      "weight": 0.9
+    },
+    {
+      "source": "semantic-retrieval",
+      "target": "semantic-tags",
+      "type": "uses",
+      "weight": 1.0
+    },
+    {
+      "source": "clerk",
+      "target": "authentication",
+      "type": "implements",
+      "weight": 1.0
+    }
+  ]
+}
